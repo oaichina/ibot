@@ -77,6 +77,9 @@ def call_iquery_train_ticket(location_from_entity,location_to_entity,time_entity
 def pattern_train_ticket(query):
     query_parse = QueryParser()
     (words,entities,tags) = query_parse.parse(query)
+    printf(words)
+    printf(entities)
+    printf(tags)
     #给元组命名，整体filter
     namedentities = query_parse.format_entities(entities) # 检查实体的数量，count ，元组，token
     # 写个if语句，然后才进入这里
@@ -101,7 +104,7 @@ def pattern_train_ticket(query):
     #printf(u"目的地:{}".format(location_to_string))
 
     # 正式查询
-    call_iquery_train_ticket(location_from_string,location_to_string,format_time)
+    #call_iquery_train_ticket(location_from_string,location_to_string,format_time)
     return
 
 
