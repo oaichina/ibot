@@ -111,7 +111,7 @@ def pattern_train_ticket(query):
     # printf(u"捕获时间:{}".format(time_string))
     # printf(u"出发地:{}".format(location_from_string))
     # printf(u"目的地:{}".format(location_to_string))
-    # printf("{} {} {} {}".format(params,time_string,location_from_string,location_to_string))
+    # printf("{} {} {} {}".format(params,format_time,location_from_string,location_to_string))
 
     # 正式查询
     call_iquery_train_ticket(params, location_from_string, location_to_string, format_time)
