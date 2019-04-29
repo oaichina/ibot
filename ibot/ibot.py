@@ -12,7 +12,7 @@ import datetime
 
 home = expanduser("~")
 with open(os.path.join(home, ".ibot.yml")) as f:
-    config = yaml.load(f)
+    config = yaml.load(f, Loader=yaml.FullLoader)
     bosonnlp_token = config["token"]
 
 # bosonnlp/client.py
